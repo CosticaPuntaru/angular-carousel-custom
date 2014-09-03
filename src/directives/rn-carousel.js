@@ -159,7 +159,9 @@
                     } else {
                         slidesCount = iElement.children().length;
                         updateIndicatorArray();
-                        updateContainerWidth();
+                        setTimeout(function(){
+                               updateContainerWidth();
+                        });
                     }
 
                     function updateIndicatorArray() {

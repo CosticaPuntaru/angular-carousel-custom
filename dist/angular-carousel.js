@@ -1,6 +1,6 @@
 /**
  * Angular Carousel - Mobile friendly touch carousel for AngularJS
- * @version v0.2.3 - 2014-08-25
+ * @version v0.2.3 - 2014-09-03
  * @link http://revolunet.github.com/angular-carousel
  * @author Julien Bouquillon <julien@revolunet.com>
  * @license MIT License, http://www.opensource.org/licenses/MIT
@@ -291,7 +291,9 @@ angular.module('angular-carousel').run(['$templateCache', function($templateCach
                     } else {
                         slidesCount = iElement.children().length;
                         updateIndicatorArray();
-                        updateContainerWidth();
+                        setTimeout(function(){
+                               updateContainerWidth();
+                        });
                     }
 
                     function updateIndicatorArray() {
